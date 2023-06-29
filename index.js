@@ -1,13 +1,17 @@
 const express = require("express");
+const passport = require("passport");
 const cors = require("cors");
 const path = require("path");
 const db = require("./config/mongoose");
 const routes = require("./routes");
 const app = express();
 const port = 8000;
+
+require("./config/passport")(app);
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors());
+
 app.use(routes);
 
 app.listen(port, function (err) {
