@@ -27,6 +27,7 @@ passport.use(
   })
 );
 
+// study
 module.exports = async (app) => {
   app.use(passport.initialize());
 };
