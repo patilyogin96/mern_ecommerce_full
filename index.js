@@ -13,14 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors());
 
-const storage = multer.diskStorage({
-  destination: "uploads/", // Specify the folder where uploaded files will be stored
-  filename: (req, file, cb) => {
-    cb(null, Date.now() + "-" + file.originalname); // Generate a unique filename for each uploaded file
-  },
-});
 
-const upload = multer({ storage: storage });
 
 app.use(routes);
 
