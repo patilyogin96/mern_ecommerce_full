@@ -14,10 +14,21 @@ const categorySchema = new mongoose.Schema({
     type: String,
     trim: true,
   },
+  image: {
+    type: String,
+    default: "",
+  },
   isActive: {
     type: Boolean,
     default: true,
   },
+  products: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Product",
+    },
+  ],
+
   updated: Date,
   created: {
     type: Date,
