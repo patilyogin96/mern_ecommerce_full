@@ -1,5 +1,7 @@
 const Category = require("../../../models/category");
-
+const path = require("path");
+const fs = require("fs");
+const uploadsFolder = path.join(__dirname, "..", "..", "..", "uploads");
 // controller code to add category
 exports.addCategory = async (req, res, next) => {
   console.log("ReqBodyCate", req.file);
@@ -35,5 +37,18 @@ exports.addCategory = async (req, res, next) => {
     return res.status(400).json({
       error,
     });
+  }
+};
+
+//get/fetch categories
+exports.getAllCategories = async (req, res, next) => {
+  try {
+    const allCategories = await Category.find({});
+
+    res.status(200).json({
+      categories: allCategories,
+    });
+  } catch (error) {
+    console.log(error);
   }
 };
