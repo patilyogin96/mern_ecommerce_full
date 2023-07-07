@@ -12,7 +12,7 @@ const cartItemSchema = new mongoose.Schema({
     type: Number,
     default: 0,
   },
-  tax: {
+  tax_gst: {
     type: Number,
     default: 0,
   },
