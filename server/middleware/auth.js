@@ -2,7 +2,7 @@ const passport = require("passport");
 const jwt = require("jsonwebtoken");
 const auth = (req, res, next) => {
   passport.authenticate("jwt", { session: false }, (err, user, info) => {
-    console.log("here", user);
+    // console.log("here", user);
 
     if (err) {
       // Handle any authentication errors

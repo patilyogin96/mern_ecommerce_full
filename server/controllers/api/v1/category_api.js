@@ -5,13 +5,13 @@ const uploadsFolder = path.join(__dirname, "..", "..", "..", "uploads");
 
 // controller code to add category
 exports.addCategory = async (req, res, next) => {
-  console.log("ReqBodyCate", req.file);
+  // console.log("ReqBodyCate", req.file);
 
   try {
     const title = req.body.title;
     const description = req.body.description;
     const isActive = req.body.isActive;
-    const image = req.file.filename;
+    // const image = req.file.filename;
 
     // validate the required fields
     // create instance of category and save it
@@ -20,7 +20,7 @@ exports.addCategory = async (req, res, next) => {
       title,
       description,
       isActive,
-      image,
+      // image,
     });
 
     category
