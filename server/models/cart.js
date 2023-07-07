@@ -36,6 +36,15 @@ const cartSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
   },
+  total_cart_price: {
+    type: Number,
+    default: 0,
+  },
+  total_cart_tax: {
+    type: Number,
+    default: 0,
+  },
+
   updated: Date,
   created: {
     type: Date,
