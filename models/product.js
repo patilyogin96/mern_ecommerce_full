@@ -18,6 +18,11 @@ const productSchema = new mongoose.Schema({
     type: Boolean,
     default: true,
   },
+  brand: {
+    type: Schema.Types.ObjectId,
+    ref: "Brand",
+    default: null,
+  },
   updated: Date,
   created: {
     type: Date,

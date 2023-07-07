@@ -2,6 +2,7 @@ const Category = require("../../../models/category");
 const path = require("path");
 const fs = require("fs");
 const uploadsFolder = path.join(__dirname, "..", "..", "..", "uploads");
+
 // controller code to add category
 exports.addCategory = async (req, res, next) => {
   console.log("ReqBodyCate", req.file);
