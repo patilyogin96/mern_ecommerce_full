@@ -3,11 +3,18 @@ import styles from "./index.module.css";
 
 import { useMediaQuery } from "@mui/material";
 import HomeCategory from "../../Components/HomeCategory/HomeCategory";
-interface HomeProps {
-  title?: string;
+
+interface CarouselItem {
+  title: string;
+  price: string;
 }
 
-const Homepage: React.FC<HomeProps> = ({ title = "Home" }) => {
+interface HomeProps {
+  title?: string;
+  items?: Array<CarouselItem>;
+}
+
+const Homepage: React.FC<HomeProps> = ({  }) => {
   const isSmallScreen = useMediaQuery("(max-width: 600px)");
   const isLargeScreen = useMediaQuery("(min-width: 1200px)");
 
@@ -20,8 +27,11 @@ const Homepage: React.FC<HomeProps> = ({ title = "Home" }) => {
         <div className={styles.carouselContainer}>Carousel PArt</div>
         {/* first category - fashion category */}
         <div>
-          <HomeCategory title={"Best of Electronics"} />
-          <HomeCategory title={"Best of Fashion"} />
+          <HomeCategory
+            
+            items={carouselItemsArray}
+          />
+          {/* <HomeCategory title={"Best of Fashion"} /> */}
         </div>
 
         {/* second categry - electronics conainer */}
@@ -31,3 +41,30 @@ const Homepage: React.FC<HomeProps> = ({ title = "Home" }) => {
 };
 
 export default Homepage;
+
+const carouselItemsArray: CarouselItem[] = [
+  {
+    title: "Air Conditioner 1",
+    price: "40000",
+  },
+  {
+    title: "Air Conditioner 2",
+    price: "40000",
+  },
+  {
+    title: "Air Conditioner 3",
+    price: "40000",
+  },
+  {
+    title: "Air Conditioner 4",
+    price: "40000",
+  },
+  {
+    title: "Air Conditioner 5",
+    price: "40000",
+  },
+  {
+    title: "Air Conditioner 6",
+    price: "40000",
+  },
+];
