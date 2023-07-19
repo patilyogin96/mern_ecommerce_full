@@ -1,15 +1,23 @@
 import React from "react";
 import styles from "./index.module.css";
+import { title } from "process";
 
-const HomeCard: React.FC = () => {
+interface InfoProps {
+  info: { id: number; title: string; price: number; image: string };
+}
+
+const HomeCard: React.FC<InfoProps> = ({ info }) => {
+  console.log("InfoProps", info);
+  const { title, image, price } = info;
+
   return (
     <>
-      <div className={styles.container}>
-        <div style={{ height: "60%" }}>
-          <img src="" alt="image_card" />
+      <div className={styles.cardContainer}>
+        <div>
+          <img src={image} alt="card_image" width={"250px"} height={"250px"} />
         </div>
-        <div>Air Conditionder</div>
-        <div>Rs 40000</div>
+        <div>{title}</div>
+        <div>{`Rs ${price}`}</div>
       </div>
     </>
   );

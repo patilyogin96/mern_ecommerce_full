@@ -1,0 +1,17 @@
+.container {
+  border: 1px solid red;
+  padding: 3px;
+  display: flex;
+  flex-direction: row;
+  /* gap: 10px; */
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+.cardContainer {
+  border: 1px solid blue;
+  padding: 2px;
+  /* width: 20%; */
+  cursor: pointer;
+}

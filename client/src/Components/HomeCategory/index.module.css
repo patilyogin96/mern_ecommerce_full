@@ -1,0 +1,24 @@
+
+.categoryContainer{
+  height: 100%;
+}
+.custom-carousel {
+  background-color: aqua !important;
+}
+
+.flexBox {
+  display: flex;
+  flex-direction: row;
+  /* gap: 3px; */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.catSideBox {
+  padding: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}

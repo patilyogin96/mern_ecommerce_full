@@ -10,7 +10,10 @@ function App() {
       <div>
         <ResponsiveAppBar />
       </div>
-      <AppRouter />
+      <div style={{flex:1}} >
+        <AppRouter />
+      </div>
+
       <div>
         <Footer />
       </div>
